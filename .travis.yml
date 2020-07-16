@@ -5,4 +5,4 @@ services:
 before_install:
   - docker build -t mbeiswenger/docker-react -f Dockerfile.dev .
 script:
-  - docker run mbeiswenger/docker-react npm run test -- --coverage
+  - docker run -e CI=true mbeiswenger/docker-react npm run test
